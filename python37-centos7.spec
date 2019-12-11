@@ -1,7 +1,7 @@
 %global pyshortver 37
 %global pybasever 3.7
 %global pyver %{pybasever}.5
-%global pysuffix -htsts
+%global pysuffix -infr
 
 Name:       python%{pyshortver}%{pysuffix}
 Version:    %{pyver}
@@ -86,7 +86,7 @@ echo "%{_prefix}/lib64" > %{buildroot}/etc/ld.so.conf.d/%{name}.conf
 exit 0
 
 %files
-/etc/ld.so.conf.d/python%{pyshortver}-htsts.conf
+/etc/ld.so.conf.d/python%{pyshortver}%{pysuffix}.conf
 %{_prefix}/*
 %dir %{_prefix}
 
